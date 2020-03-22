@@ -5,19 +5,22 @@
             "name": "client",
             "image": "svansteelandt/multi-client",
             "hostname": "client",
-            "essential": false
+            "essential": false,
+            "memory": 128
         },
         {
             "name": "server",
             "image": "svansteelandt/multi-server",
             "hostname": "api",
-            "essential": false
+            "essential": false,
+            "memory": 128
         },
         {
             "name": "worker",
             "image":"svansteelandt/multi-worker",
             "hostname": "worker",
-            "essential": false
+            "essential": false,
+            "memory": 128
         }, {
             "name": "nginx",
             "image": "svansteelandt/multi-nginx",
@@ -29,7 +32,8 @@
                     "containerPort": 80
                 }
             ],
-            "links": ["client", "server"]
+            "links": ["client", "server"],
+            "memory": 128
         }
     ]
 }
