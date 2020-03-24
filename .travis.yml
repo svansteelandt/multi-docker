@@ -22,6 +22,14 @@ after_success:
     - docker push svansteelandt/multi-worker
 
 # Deploy section
+#env variables elastic beanstalk
+#PGDATABASE: fibvalues
+#PGHOST: multi-docker-postgres.c854hhbzzruu.eu-west-3.rds.amazonaws.com
+#PGPASSWORD: postgrespassword
+#PGPORT: 5432
+#PGUSER: postgres
+#REDIS_HOST: multi-docker-redis.e6aek7.0001.euw3.cache.amazonaws.com
+#REDIS_PORT: 6379
 deploy:
     edge: true
     provider: elasticbeanstalk
