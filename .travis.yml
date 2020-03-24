@@ -21,6 +21,7 @@ after_success:
     - docker push svansteelandt/multi-server
     - docker push svansteelandt/multi-worker
 
+# Deploy section
 deploy:
     edge: true
     provider: elasticbeanstalk
